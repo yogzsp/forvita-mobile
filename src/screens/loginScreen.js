@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
 import LoginForm from '../components/formComponent';
 import { useNavigation } from '@react-navigation/native';
-import { Constants } from 'expo-constants';
 import { StatusBar } from "expo-status-bar";
 
 const LoginScreen = () => {
