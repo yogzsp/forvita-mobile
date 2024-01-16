@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, TextInput, Image, StyleSheet, ScrollView } from 'react-native';
-import color from '../../constants/color';
+import color from '../constants/color';
 import { StatusBar } from 'expo-status-bar';
 import { FontAwesome } from '@expo/vector-icons';
-import NavbarTop from '../../components/navbarCompoenent';
+import NavbarTop from '../components/navbarCompoenent';
 
 const ProfileScreen = () => {
   return (
@@ -53,15 +53,16 @@ const ProfileScreen = () => {
                 <Text style={styles.informationCaption}>Ketik ulang password sesuai dengan sebelumnya</Text>
             </View>
             <TextInput style={styles.input} placeholder="Masukkan konfirmasi password baru" secureTextEntry />
-
+            </View>
+        </View>
+        <View style={styles.container}>
             <TouchableOpacity style={styles.saveButton}>
                 <Text style={styles.saveButtonText}>Simpan Profil</Text>
             </TouchableOpacity>
-            </View>
         </View>
         <View style={styles.footer}>
-        <Text>&copy; 2023. DPR RI</Text>
-      </View>
+            <Text>&copy; 2023. DPR RI</Text>
+        </View>
       </ScrollView>
     </View>
   );
@@ -114,14 +115,17 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   saveButton: {
-    marginTop:10,
+    margin:10,
     backgroundColor: color.primary,
     padding: 10,
+    width:'30%',
     borderRadius: 5,
-    alignItems: 'center',
+    alignItems: 'flex-start',
   },
   saveButtonText: {
     color: 'white',
+    textAlign:'center',
+    width:'100%',
   },
   footer: {
     padding: 10,
